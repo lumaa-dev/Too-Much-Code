@@ -93,7 +93,7 @@
 		B9FCF6E12B4AF3E200F7B766 = {
 			isa = PBXGroup;
 			children = (
-				B9FCF6EC2B4AF3E200F7B766 /* Too Much Code */,
+				B9FCF6EC2B4AF3E200F7B766 /* TMC */,
 				B9FCF7072B4AF70100F7B766 /* TMC-Widget */,
 				B9FCF7022B4AF70100F7B766 /* Frameworks */,
 				B9FCF6EB2B4AF3E200F7B766 /* Products */,
@@ -109,7 +109,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B9FCF6EC2B4AF3E200F7B766 /* Too Much Code */ = {
+		B9FCF6EC2B4AF3E200F7B766 /* TMC */ = {
 			isa = PBXGroup;
 			children = (
 				B9FCF6ED2B4AF3E200F7B766 /* TestApp.swift */,
@@ -119,7 +119,7 @@
 				B9FCF6F12B4AF3E400F7B766 /* Assets.xcassets */,
 				B9FCF6F32B4AF3E400F7B766 /* Preview Content */,
 			);
-			path = "Too Much Code";
+			path = TMC;
 			sourceTree = "<group>";
 		};
 		B9FCF6F32B4AF3E400F7B766 /* Preview Content */ = {
