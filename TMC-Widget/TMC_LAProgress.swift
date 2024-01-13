@@ -52,11 +52,12 @@ struct TMC_LAProgress: Widget {
     
     @ViewBuilder func progress(current: Double) -> some View {
         Gauge(value: current, in: 0...1) {
-            Image(systemName: "heart.fill")
-                .foregroundColor(.red)
+            Image(systemName: "camera.badge.clock.fill")
+                .foregroundStyle(LinearGradient(colors: [.yellow, .red, .purple], startPoint: .bottomLeading, endPoint: .topTrailing))
         } currentValueLabel: {
             Text("\(Int(current * 100))")
                 .foregroundColor(Color.white)
+                .contentTransition(.numericText(value: current))
         }
         .gaugeStyle(.accessoryCircularCapacity)
         .tint(LinearGradient(colors: [.yellow, .red, .purple], startPoint: .bottomLeading, endPoint: .topTrailing))
