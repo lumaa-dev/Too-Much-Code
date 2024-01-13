@@ -23,6 +23,7 @@ struct InstaLiveActivityView: View {
                     Text(String("Start"))
                 }
                 .disabled(hasActivity)
+                .buttonStyle(.borderless)
                 
                 Button {
                     Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { timer in
@@ -31,9 +32,18 @@ struct InstaLiveActivityView: View {
                         }
                     }
                 } label: {
-                    Text(String("Update"))
+                    Text(String("Update once"))
                 }
                 .disabled(!hasActivity)
+                .buttonStyle(.borderless)
+                
+                Button {
+                    addUpActivity()
+                } label: {
+                    Text(String("Add progressively"))
+                }
+                .disabled(!hasActivity)
+                .buttonStyle(.borderless)
                 
                 Button {
                     Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { timer in
@@ -45,6 +55,7 @@ struct InstaLiveActivityView: View {
                     Text(String("Stop"))
                 }
                 .disabled(!hasActivity)
+                .buttonStyle(.borderless)
             }
         }
         .navigationTitle("Live Activity")
@@ -78,11 +89,44 @@ struct InstaLiveActivityView: View {
         await activity.update(
             ActivityContent<TMC_LAProgressAttribute.ContentState>(
                 state: contentState,
-                staleDate: Date.now + 15,
+                staleDate: Date.now + 5,
                 relevanceScore: 100
             ),
-            alertConfiguration: .init(title: "Notif Title", body: "Notif Body", sound: .named("N/A"))
+            alertConfiguration: .init(title: "Loading", body: "Fake loading...", sound: .default)
         )
+    }
+    
+    func addUpActivity() {
+        guard let activity else { return }
+        let newLoad: Double = 0
+        
+        withAnimation {
+            load = newLoad
+        }
+        
+        Thread.sleep(forTimeInterval: 0.5)
+        
+        for i in stride(from: 0, through: 1, by: 0.05) {
+            Thread.sleep(forTimeInterval: 1.5)
+            Task {
+                let contentState = TMC_LAProgressAttribute.ContentState(loading: i)
+                print("\(i)")
+                
+                withAnimation {
+                    load = i
+                }
+                
+                await activity.update(
+                    ActivityContent<TMC_LAProgressAttribute.ContentState>(
+                        state: contentState,
+                        staleDate: Date.now + 15,
+                        relevanceScore: 100
+                    ),
+                    alertConfiguration: nil
+                )
+            }
+        }
+        
     }
     
     func endActivity() async {
@@ -100,4 +144,11 @@ struct InstaLiveActivityView: View {
 
 #Preview {
     InstaLiveActivityView()
+}
+
+private extension Task where Success == Never, Failure == Never {
+    static func sleep(seconds: Double) async throws {
+        let duration = UInt64(seconds * 1_000_000_000)
+        try await Task.sleep(nanoseconds: duration)
+    }
 }
