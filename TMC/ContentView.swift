@@ -9,6 +9,7 @@ struct ContentView: View {
                 Section(header: Text(String("Live Activities"))) {
                     NavigationLink {
                         LiveActivityView()
+                            .tint(Color.blue)
                     } label: {
                         Label(String("Live Activity"), systemImage: "clock.badge.fill")
                             .foregroundStyle(.blue)
@@ -16,6 +17,7 @@ struct ContentView: View {
                     
                     NavigationLink {
                         InstaLiveActivityView()
+                            .tint(LinearGradient(colors: [.yellow, .red, .purple], startPoint: .bottomLeading, endPoint: .topTrailing))
                     } label: {
                         Label(String("Instagram Live Activity"), systemImage: "camera.badge.clock.fill")
                             .foregroundStyle(LinearGradient(colors: [.yellow, .red, .purple], startPoint: .leading, endPoint: .trailing))
