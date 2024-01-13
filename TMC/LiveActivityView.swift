@@ -23,6 +23,7 @@ struct LiveActivityView: View {
                     Text(String("Start"))
                 }
                 .disabled(hasActivity)
+                .buttonStyle(.bordered)
                 
                 Button {
                     Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { timer in
@@ -34,6 +35,7 @@ struct LiveActivityView: View {
                     Text(String("Update"))
                 }
                 .disabled(!hasActivity)
+                .buttonStyle(.bordered)
                 
                 Button {
                     Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { timer in
@@ -45,6 +47,7 @@ struct LiveActivityView: View {
                     Text(String("Stop"))
                 }
                 .disabled(!hasActivity)
+                .buttonStyle(.bordered)
             }
         }
         .navigationTitle("Live Activity")
