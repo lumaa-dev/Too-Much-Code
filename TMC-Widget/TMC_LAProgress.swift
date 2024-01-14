@@ -1,5 +1,6 @@
 //Made by Lumaa
 
+#if os(iOS)
 import ActivityKit
 import WidgetKit
 import SwiftUI
@@ -63,3 +64,4 @@ struct TMC_LAProgress: Widget {
         .tint(LinearGradient(colors: [.yellow, .red, .purple], startPoint: .bottomLeading, endPoint: .topTrailing))
     }
 }
+#endif

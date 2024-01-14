@@ -1,5 +1,6 @@
 //Made by Lumaa
 
+#if os(iOS)
 import ActivityKit
 import WidgetKit
 import SwiftUI
@@ -72,3 +73,5 @@ extension TMC_WidgetAttributes.ContentState {
     TMC_WidgetAttributes.ContentState.smiley
     TMC_WidgetAttributes.ContentState.starEyes
 }
+
+#endif

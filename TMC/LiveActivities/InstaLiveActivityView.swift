@@ -1,5 +1,6 @@
 //Made by Lumaa
 
+#if os(iOS)
 import SwiftUI
 import ActivityKit
 
@@ -152,3 +153,5 @@ private extension Task where Success == Never, Failure == Never {
         try await Task.sleep(nanoseconds: duration)
     }
 }
+
+#endif

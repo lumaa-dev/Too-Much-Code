@@ -8,5 +8,8 @@ struct TestApp: App {
         WindowGroup {
             ContentView()
         }
+        #if os(macOS)
+        .windowToolbarStyle(UnifiedCompactWindowToolbarStyle())
+        #endif
     }
 }

@@ -1,5 +1,6 @@
 //Made by Lumaa
 
+#if os(iOS)
 import SwiftUI
 import ActivityKit
 
@@ -103,3 +104,5 @@ struct LiveActivityView: View {
 #Preview {
     LiveActivityView()
 }
+
+#endif
