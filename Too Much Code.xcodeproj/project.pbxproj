@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B90695C92B53FF590083D05E /* BatteryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90695C82B53FF590083D05E /* BatteryView.swift */; };
 		B90695CB2B54017A0083D05E /* SharedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90695CA2B54017A0083D05E /* SharedService.swift */; };
+		B90695CD2B5416FE0083D05E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B90695CC2B5416FE0083D05E /* README.md */; };
 		B9FCF6EE2B4AF3E200F7B766 /* TestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FCF6ED2B4AF3E200F7B766 /* TestApp.swift */; };
 		B9FCF6F02B4AF3E200F7B766 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FCF6EF2B4AF3E200F7B766 /* ContentView.swift */; };
 		B9FCF6F22B4AF3E400F7B766 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9FCF6F12B4AF3E400F7B766 /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 /* Begin PBXFileReference section */
 		B90695C82B53FF590083D05E /* BatteryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryView.swift; sourceTree = "<group>"; };
 		B90695CA2B54017A0083D05E /* SharedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedService.swift; sourceTree = "<group>"; };
+		B90695CC2B5416FE0083D05E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B9FCF6EA2B4AF3E200F7B766 /* Too Much Code.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Too Much Code.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9FCF6ED2B4AF3E200F7B766 /* TestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApp.swift; sourceTree = "<group>"; };
 		B9FCF6EF2B4AF3E200F7B766 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 		B9FCF6E12B4AF3E200F7B766 = {
 			isa = PBXGroup;
 			children = (
+				B90695CC2B5416FE0083D05E /* README.md */,
 				B9FCF6EC2B4AF3E200F7B766 /* TMC */,
 				B9FCF7072B4AF70100F7B766 /* TMC-Widget */,
 				B9FCF7022B4AF70100F7B766 /* Frameworks */,
@@ -256,6 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B90695CD2B5416FE0083D05E /* README.md in Resources */,
 				B9FCF6F52B4AF3E400F7B766 /* Preview Assets.xcassets in Resources */,
 				B9FCF6F22B4AF3E400F7B766 /* Assets.xcassets in Resources */,
 			);
