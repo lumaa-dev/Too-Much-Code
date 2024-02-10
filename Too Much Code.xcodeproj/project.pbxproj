@@ -57,6 +57,7 @@
 		B90695C82B53FF590083D05E /* BatteryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryView.swift; sourceTree = "<group>"; };
 		B90695CA2B54017A0083D05E /* SharedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedService.swift; sourceTree = "<group>"; };
 		B90695CC2B5416FE0083D05E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B9DC69272B7783A100E625B9 /* Too-Much-Code-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Too-Much-Code-Info.plist"; sourceTree = "<group>"; };
 		B9FCF6EA2B4AF3E200F7B766 /* Too Much Code.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Too Much Code.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9FCF6ED2B4AF3E200F7B766 /* TestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApp.swift; sourceTree = "<group>"; };
 		B9FCF6EF2B4AF3E200F7B766 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -117,6 +118,7 @@
 		B9FCF6E12B4AF3E200F7B766 = {
 			isa = PBXGroup;
 			children = (
+				B9DC69272B7783A100E625B9 /* Too-Much-Code-Info.plist */,
 				B90695CC2B5416FE0083D05E /* README.md */,
 				B9FCF6EC2B4AF3E200F7B766 /* TMC */,
 				B9FCF7072B4AF70100F7B766 /* TMC-Widget */,
@@ -447,7 +449,9 @@
 				DEVELOPMENT_TEAM = HB5P3BML86;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Too-Much-Code-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Too Much Code";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Too Much Code will try to send your battery to your other devices";
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -485,7 +489,9 @@
 				DEVELOPMENT_TEAM = HB5P3BML86;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Too-Much-Code-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Too Much Code";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Too Much Code will try to send your battery to your other devices";
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

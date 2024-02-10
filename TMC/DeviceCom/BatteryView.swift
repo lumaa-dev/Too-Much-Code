@@ -10,32 +10,85 @@ import IOKit.ps
 #endif
 
 struct BatteryView: View {
-    @ObservedObject var sharedService = SharedService()
-    @State var currentDevice: Device = .init(name: "Unknown Name", batteryLevel: -100)
+    @Environment(\.dismiss) private var dismiss
+    
+    @ObservedObject var sharedService = Peer2PeerConnectionManager()
+    @State private var currentDevice: PeerModel = .init(battery: 0, device: "")
+    
+    @State private var peerEnabled: Bool = false
+    @State private var sendingData: Bool = false
     
     var body: some View {
         List {
             VStack(alignment: .leading) {
-                Text("\(currentDevice.name) (Current)")
+                Text("\(currentDevice.device) (Current)")
                     .font(.headline)
                 Text("Battery Level: \(currentDevice.batteryLevel)%")
                     .font(.subheadline)
             }
             
-            ForEach(sharedService.devices) { device in
+            if let connected = sharedService.peerContent {
                 VStack(alignment: .leading) {
-                    Text(device.name)
+                    Text("\(connected.device)")
                         .font(.headline)
-                    Text("Battery Level: \(device.batteryLevel)%")
+                    Text("Battery Level: \(connected.batteryLevel)%")
                         .font(.subheadline)
+                }
+            }
+            
+            if peerEnabled {
+                Section(header: Text("Found Devices")) {
+                    ForEach(sharedService.peers, id: \.self) { device in
+                        HStack {
+                            Text(device.displayName)
+                                .font(.headline)
+                            
+                            Spacer()
+                            
+                            Button {
+                                sharedService.invitePeer(device, to: currentDevice)
+                                sharedService.send(currentDevice, to: device)
+                            } label: {
+                                if sendingData {
+                                    ProgressView()
+                                        .progressViewStyle(.circular)
+                                } else {
+                                    Text("Send battery")
+                                }
+                            }
+                            .disabled(sendingData)
+                        }
+                    }
                 }
             }
         }
         .navigationTitle(String("Batteries"))
+        .toolbar {
+            ToolbarItem(placement: .primaryAction) {
+                Button {
+                    if peerEnabled {
+                        sharedService.stopBrowsing()
+                    } else {
+                        sharedService.startBrowsing()
+                    }
+                    
+                    peerEnabled.toggle()
+                } label: {
+                    Image(systemName: "antenna.radiowaves.left.and.right", variableValue: peerEnabled ? 1.0 : 0.0)
+                        .foregroundStyle(peerEnabled ? Color.green : Color.blue)
+                        .symbolEffect(.variableColor.cumulative.hideInactiveLayers.nonReversing, isActive: peerEnabled)
+                }
+            }
+        }
         .onAppear {
             let battery = BatteryControl.getBatteryPercent()
-            if battery != -1 {
-                sharedService.sendBatteryLevel(battery)
+            let auth = LocalNetworkAuthorization()
+            auth.requestAuthorization { authorized in
+                if !authorized {
+                    dismiss()
+                } else {
+                    sharedService.isReceivingModel = true
+                }
             }
             
             if currentDevice.batteryLevel <= 0 {
@@ -45,7 +98,15 @@ struct BatteryView: View {
                 let deviceName = Host.current().localizedName ?? "Mac" // fallback name
                 #endif
                 
-                currentDevice = .init(name: deviceName, batteryLevel: battery)
+                currentDevice = PeerModel(battery: battery, device: deviceName)
+            }
+        }
+        .onDisappear {
+            let auth = LocalNetworkAuthorization()
+            auth.requestAuthorization { authorized in
+                if authorized {
+                    sharedService.isReceivingModel = true
+                }
             }
         }
     }
