@@ -31,11 +31,27 @@ struct ContentView: View {
                             Label(String("Instagram Live Activity"), systemImage: "camera.badge.clock.fill")
                                 .foregroundStyle(LinearGradient(colors: [.yellow, .red, .purple], startPoint: .leading, endPoint: .trailing))
                         }
+                    
                     #else
                         Label(String("Live Activity"), systemImage: "clock.badge.fill")
                             .foregroundStyle(.gray)
                         
                         Label(String("Instagram Live Activity"), systemImage: "camera.badge.clock.fill")
+                            .foregroundStyle(.gray)
+                    #endif
+                }
+                
+                Section(header: Text(String("UIKit"))) {
+                    #if os(iOS)
+                        NavigationLink {
+                            CustomSheetView()
+                                .tint(Color.purple)
+                        } label: {
+                            Label(String("Sheets"), systemImage: "rectangle.stack")
+                                .foregroundStyle(Color.purple)
+                        }
+                    #else
+                        Label(String("Sheets"), systemImage: "rectangle.stack")
                             .foregroundStyle(.gray)
                     #endif
                 }
