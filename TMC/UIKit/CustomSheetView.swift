@@ -1,5 +1,5 @@
 //Made by Lumaa
-
+#if os(iOS)
 import SwiftUI
 
 struct CustomSheetView: View {
@@ -102,3 +102,4 @@ struct SheetView: View{
 #Preview {
     CustomSheetView()
 }
+#endif
