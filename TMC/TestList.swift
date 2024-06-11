@@ -43,6 +43,7 @@ struct TestList: View {
                     Section(header: Text("Fruits")) {
                         ForEach(fruits, id: \.self) { fruit in
                             Text(fruit)
+                                .id(fruit)
                         }
                         .onDelete { index in
                             fruits.remove(atOffsets: index)
@@ -51,12 +52,14 @@ struct TestList: View {
                             fruits.move(fromOffsets: indexSet, toOffset: index)
                         }
                     }
+                    
                 }
                 
                 if onlyShow == .vegetables || onlyShow == nil {
                     Section(header: Text("Vegetables")) {
                         ForEach(vegetables, id: \.self) { vegetable in
                             Text(vegetable)
+                                .id(vegetable)
                         }
                         .onDelete { index in
                             vegetables.remove(atOffsets: index)
@@ -67,11 +70,23 @@ struct TestList: View {
                     }
                 }
             } else {
-                ForEach(results, id: \.self) { fruit in
-                    Text(fruit)
+                ForEach(results, id: \.self) { result in
+                    let ownership: String = fruits.contains(result) ? "Fruit" : "Vegetable"
+                    
+                    VStack(alignment: .leading) {
+                        Text(result)
+                        
+                        if self.onlyShow != nil {
+                            Text(ownership)
+                                .foregroundStyle(.gray)
+                                .font(.caption)
+                        }
+                    }
+                    .id(result)
                 }
             }
         }
+        .searchable(text: $searchQuery, placement: .navigationBarDrawer(displayMode: .always))
     }
     
     enum FoodType: String {
