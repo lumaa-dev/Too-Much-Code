@@ -67,7 +67,7 @@ struct ContentView: View {
                 
                 Section(header: Text(String("Credits"))) {
                     Link(destination: URL(string: "https://techhub.social/@lumaa")!) {
-                        Text(String("By Lumaa (@lumaa@techhub.social)"))
+                        Text(String("By @lumaa@techhub.social"))
                     }
                     ShareLink(item: URL(string: "https://github.com/lumaa-dev/Too-Much-Code")!) {
                         Label(String("Share the GitHub Repository"), systemImage: "square.and.arrow.up")
