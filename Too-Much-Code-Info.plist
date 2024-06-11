@@ -9,5 +9,11 @@
 		<string>_tmcbattery._tcp</string>
 		<string>_tmcbattery._udp</string>
 	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>external-accessory</string>
+		<string>fetch</string>
+		<string>nearby-interaction</string>
+	</array>
 </dict>
 </plist>

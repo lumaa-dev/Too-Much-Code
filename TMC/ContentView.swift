@@ -3,12 +3,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.openWindow) private var openWindow: OpenWindowAction
+    
     var isMac: Bool {
         #if os(macOS)
             return true
         #else
             return false
         #endif
+    }
+    
+    var isBeta: Bool {
+        if #available(iOS 18.0, macOS 15.0, *) {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    private var newOSString: String {
+        isMac ? "macOS Sequoia" : "iOS 18"
     }
     
     var body: some View {
@@ -65,6 +79,28 @@ struct ContentView: View {
                     }
                 }
                 
+                Section(header: Text("New \(newOSString) content")) {
+                    Text("This section is enabled for users using a \(newOSString) beta.")
+                        .listRowBackground(Rectangle().fill(Color.red.gradient))
+                    
+                    Button {
+                        openWindow(id: "test-utility")
+                    } label: {
+                        Label("Utility Window (macOS)", systemImage: "macwindow")
+                    }
+                    .disabled(!isMac && isBeta)
+                    .foregroundColor(!isMac && isBeta ? Color.gray : Color.blue)
+                    
+                    NavigationLink {
+                        MagicIconView()
+                    } label: {
+                        Label("Magic SF Symbol transition", systemImage: "wand.and.sparkles.inverse")
+                            .foregroundColor(Color.yellow)
+                    }
+                    .disabled(!isBeta)
+                }
+                
+                // MARK: - Credits
                 Section(header: Text(String("Credits"))) {
                     Link(destination: URL(string: "https://techhub.social/@lumaa")!) {
                         Text(String("By @lumaa@techhub.social"))

@@ -10,7 +10,10 @@
 		B90695C92B53FF590083D05E /* BatteryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90695C82B53FF590083D05E /* BatteryView.swift */; };
 		B90695CB2B54017A0083D05E /* SharedService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90695CA2B54017A0083D05E /* SharedService.swift */; };
 		B90695CD2B5416FE0083D05E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B90695CC2B5416FE0083D05E /* README.md */; };
+		B9406F962C18CA4E00E066DB /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9406F952C18CA4E00E066DB /* TestView.swift */; };
+		B9406F982C18CE8300E066DB /* MagicIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9406F972C18CE8300E066DB /* MagicIconView.swift */; };
 		B99032B62BE27390004224DE /* CustomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99032B52BE27390004224DE /* CustomSheetView.swift */; };
+		B99032B92BE291C5004224DE /* BackgroundBattery.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99032B82BE291C5004224DE /* BackgroundBattery.swift */; };
 		B9FCF6EE2B4AF3E200F7B766 /* TestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FCF6ED2B4AF3E200F7B766 /* TestApp.swift */; };
 		B9FCF6F02B4AF3E200F7B766 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FCF6EF2B4AF3E200F7B766 /* ContentView.swift */; };
 		B9FCF6F22B4AF3E400F7B766 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9FCF6F12B4AF3E400F7B766 /* Assets.xcassets */; };
@@ -58,7 +61,10 @@
 		B90695C82B53FF590083D05E /* BatteryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryView.swift; sourceTree = "<group>"; };
 		B90695CA2B54017A0083D05E /* SharedService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedService.swift; sourceTree = "<group>"; };
 		B90695CC2B5416FE0083D05E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B9406F952C18CA4E00E066DB /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		B9406F972C18CE8300E066DB /* MagicIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicIconView.swift; sourceTree = "<group>"; };
 		B99032B52BE27390004224DE /* CustomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSheetView.swift; sourceTree = "<group>"; };
+		B99032B82BE291C5004224DE /* BackgroundBattery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundBattery.swift; sourceTree = "<group>"; };
 		B9DC69272B7783A100E625B9 /* Too-Much-Code-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Too-Much-Code-Info.plist"; sourceTree = "<group>"; };
 		B9FCF6EA2B4AF3E200F7B766 /* Too Much Code.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Too Much Code.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9FCF6ED2B4AF3E200F7B766 /* TestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestApp.swift; sourceTree = "<group>"; };
@@ -113,8 +119,17 @@
 			children = (
 				B90695C82B53FF590083D05E /* BatteryView.swift */,
 				B90695CA2B54017A0083D05E /* SharedService.swift */,
+				B99032B82BE291C5004224DE /* BackgroundBattery.swift */,
 			);
 			path = DeviceCom;
+			sourceTree = "<group>";
+		};
+		B9406F942C18CA1A00E066DB /* Beta */ = {
+			isa = PBXGroup;
+			children = (
+				B9406F972C18CE8300E066DB /* MagicIconView.swift */,
+			);
+			path = Beta;
 			sourceTree = "<group>";
 		};
 		B99032B72BE287A6004224DE /* UIKit */ = {
@@ -149,10 +164,12 @@
 		B9FCF6EC2B4AF3E200F7B766 /* TMC */ = {
 			isa = PBXGroup;
 			children = (
+				B9406F942C18CA1A00E066DB /* Beta */,
 				B99032B72BE287A6004224DE /* UIKit */,
 				B90695C72B53FEE60083D05E /* DeviceCom */,
 				B90695C62B53FED00083D05E /* LiveActivities */,
 				B9FCF6EF2B4AF3E200F7B766 /* ContentView.swift */,
+				B9406F952C18CA4E00E066DB /* TestView.swift */,
 				B9FCF6ED2B4AF3E200F7B766 /* TestApp.swift */,
 				B9FCF6F12B4AF3E400F7B766 /* Assets.xcassets */,
 				B9FCF6F32B4AF3E400F7B766 /* Preview Content */,
@@ -295,13 +312,16 @@
 			files = (
 				B90695C92B53FF590083D05E /* BatteryView.swift in Sources */,
 				B9FCF6FC2B4AF53800F7B766 /* LiveActivityView.swift in Sources */,
+				B9406F962C18CA4E00E066DB /* TestView.swift in Sources */,
 				B99032B62BE27390004224DE /* CustomSheetView.swift in Sources */,
+				B99032B92BE291C5004224DE /* BackgroundBattery.swift in Sources */,
 				B9FCF6F02B4AF3E200F7B766 /* ContentView.swift in Sources */,
 				B9FCF71C2B4B04DB00F7B766 /* TMC_LAProgress.swift in Sources */,
 				B90695CB2B54017A0083D05E /* SharedService.swift in Sources */,
 				B9FCF71E2B4B05B300F7B766 /* InstaLiveActivityView.swift in Sources */,
 				B9FCF6EE2B4AF3E200F7B766 /* TestApp.swift in Sources */,
 				B9FCF71A2B4AF76800F7B766 /* TMC_WidgetLiveActivity.swift in Sources */,
+				B9406F982C18CE8300E066DB /* MagicIconView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
