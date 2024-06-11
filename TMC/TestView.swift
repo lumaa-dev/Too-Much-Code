@@ -5,9 +5,9 @@ import SwiftUI
 struct TestView: View {
     private var width: CGFloat {
         #if os(iOS)
-        return 150
-        #else
         return 350
+        #else
+        return 650
         #endif
     }
     
