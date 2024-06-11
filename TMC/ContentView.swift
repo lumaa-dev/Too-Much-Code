@@ -98,6 +98,18 @@ struct ContentView: View {
                             .foregroundColor(Color.yellow)
                     }
                     .disabled(!isBeta)
+                    
+                    if #available(iOS 18.0, macOS 15.0, *) {
+                        NavigationLink {
+                            NewTabs()
+                        } label: {
+                            Label("Sidebar TabView", systemImage: "sidebar.leading")
+                                .foregroundColor(Color.cyan)
+                        }
+                    } else {
+                        Label("Sidebar TabView", systemImage: "sidebar.leading")
+                            .foregroundColor(Color.gray)
+                    }
                 }
                 
                 // MARK: - Credits
