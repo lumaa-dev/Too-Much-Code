@@ -6,6 +6,7 @@ import SwiftUI
 struct NewTabs: View {
     @State private var foodType: TestList.FoodType? = nil
     
+    // this does not work?
     @State private var customTab: TabViewCustomization = .init()
     
     var body: some View {
