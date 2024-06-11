@@ -70,15 +70,7 @@ struct SheetView: View{
     
     var body: some View {
         ZStack {
-            VStack {
-                Text("This is a sub-view, from a sheet")
-                Button {
-                    dismiss()
-                } label: {
-                    Text("Dismiss")
-                }
-            }
-            .padding(.horizontal)
+            TestView()
         }
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         .overlay(alignment: .top) {
