@@ -12,6 +12,7 @@
 		B90695CD2B5416FE0083D05E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B90695CC2B5416FE0083D05E /* README.md */; };
 		B9406F962C18CA4E00E066DB /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9406F952C18CA4E00E066DB /* TestView.swift */; };
 		B9406F982C18CE8300E066DB /* MagicIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9406F972C18CE8300E066DB /* MagicIconView.swift */; };
+		B9406F9A2C18D69000E066DB /* TestList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9406F992C18D69000E066DB /* TestList.swift */; };
 		B99032B62BE27390004224DE /* CustomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99032B52BE27390004224DE /* CustomSheetView.swift */; };
 		B99032B92BE291C5004224DE /* BackgroundBattery.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99032B82BE291C5004224DE /* BackgroundBattery.swift */; };
 		B9FCF6EE2B4AF3E200F7B766 /* TestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FCF6ED2B4AF3E200F7B766 /* TestApp.swift */; };
@@ -63,6 +64,7 @@
 		B90695CC2B5416FE0083D05E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B9406F952C18CA4E00E066DB /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		B9406F972C18CE8300E066DB /* MagicIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicIconView.swift; sourceTree = "<group>"; };
+		B9406F992C18D69000E066DB /* TestList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestList.swift; sourceTree = "<group>"; };
 		B99032B52BE27390004224DE /* CustomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSheetView.swift; sourceTree = "<group>"; };
 		B99032B82BE291C5004224DE /* BackgroundBattery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundBattery.swift; sourceTree = "<group>"; };
 		B9DC69272B7783A100E625B9 /* Too-Much-Code-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Too-Much-Code-Info.plist"; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				B90695C62B53FED00083D05E /* LiveActivities */,
 				B9FCF6EF2B4AF3E200F7B766 /* ContentView.swift */,
 				B9406F952C18CA4E00E066DB /* TestView.swift */,
+				B9406F992C18D69000E066DB /* TestList.swift */,
 				B9FCF6ED2B4AF3E200F7B766 /* TestApp.swift */,
 				B9FCF6F12B4AF3E400F7B766 /* Assets.xcassets */,
 				B9FCF6F32B4AF3E400F7B766 /* Preview Content */,
@@ -321,6 +324,7 @@
 				B9FCF71E2B4B05B300F7B766 /* InstaLiveActivityView.swift in Sources */,
 				B9FCF6EE2B4AF3E200F7B766 /* TestApp.swift in Sources */,
 				B9FCF71A2B4AF76800F7B766 /* TMC_WidgetLiveActivity.swift in Sources */,
+				B9406F9A2C18D69000E066DB /* TestList.swift in Sources */,
 				B9406F982C18CE8300E066DB /* MagicIconView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
