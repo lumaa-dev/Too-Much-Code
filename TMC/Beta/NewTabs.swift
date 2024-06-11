@@ -6,7 +6,6 @@ import SwiftUI
 struct NewTabs: View {
     @State private var foodType: TestList.FoodType? = nil
     
-    // this does not work?
     @State private var customTab: TabViewCustomization = .init()
     
     var body: some View {
@@ -21,13 +20,16 @@ struct NewTabs: View {
                 Tab("Fruits", systemImage: "tree") {
                     TestList(onlyShow: .fruits)
                 }
+                .tabPlacement(.automatic)
                 .customizationID("fruits")
                 
                 Tab("Vegetables", systemImage: "leaf.fill") {
                     TestList(onlyShow: .vegetables)
                 }
+                .tabPlacement(.automatic)
                 .customizationID("vegetables")
             }
+            .tabPlacement(.sidebarOnly)
         }
         .tabViewStyle(.sidebarAdaptable)
         .tabViewCustomization($customTab)
