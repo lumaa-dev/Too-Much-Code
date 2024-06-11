@@ -6,7 +6,9 @@ import SwiftUI
 struct NewTabs: View {
     @State private var foodType: TestList.FoodType? = nil
     
+    #if os(iOS)
     @State private var customTab: TabViewCustomization = .init()
+    #endif
     
     var body: some View {
         TabView {
@@ -32,7 +34,10 @@ struct NewTabs: View {
             .tabPlacement(.sidebarOnly)
         }
         .tabViewStyle(.sidebarAdaptable)
+        #if os(iOS)
         .tabViewCustomization($customTab)
+        #endif
+        
     }
 }
 

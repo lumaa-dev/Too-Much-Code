@@ -32,8 +32,21 @@ struct TestList: View {
         let filteredFruits = self.onlyShow == .fruits || self.onlyShow == nil ? fruits.filter({ $0.localizedCaseInsensitiveContains(searchQuery) }) : []
         let filteredVege = self.onlyShow == .vegetables || self.onlyShow == nil ? vegetables.filter({ $0.localizedCaseInsensitiveContains(searchQuery) }) : []
         
-        let filteredTotal = [filteredFruits, filteredVege]
+        #if os(iOS)
+        var filteredTotal = [filteredFruits, filteredVege]
         return filteredTotal.items
+        #else
+        var filteredTotal: [String] = []
+        
+        for fruit in filteredFruits {
+            filteredTotal.append(fruit)
+        }
+        for vegetable in filteredVege {
+            filteredTotal.append(vegetable)
+        }
+        
+        return filteredTotal
+        #endif
     }
     
     var body: some View {
@@ -86,7 +99,11 @@ struct TestList: View {
                 }
             }
         }
+        #if os(iOS)
         .searchable(text: $searchQuery, placement: .navigationBarDrawer(displayMode: .always))
+        #else
+        .searchable(text: $searchQuery, placement: .toolbar)
+        #endif
     }
     
     enum FoodType: String {
