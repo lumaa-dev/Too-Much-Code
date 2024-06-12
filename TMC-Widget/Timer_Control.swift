@@ -1,5 +1,6 @@
 //Made by Lumaa
 
+#if os(iOS)
 import SwiftUI
 import WidgetKit
 
@@ -32,3 +33,4 @@ struct TimerValueProvider: ControlValueProvider {
     
     let previewValue: Bool = false
 }
+#endif

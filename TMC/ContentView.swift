@@ -127,6 +127,14 @@ struct ContentView: View {
                         Label("Translation API", systemImage: "translate")
                             .foregroundColor(Color.cyan)
                     }
+                    
+                    NavigationLink {
+                        TextRendererView()
+                    } label: {
+                        Label("TextRenderer", systemImage: "textformat.size")
+                            .foregroundColor(Color.indigo)
+                    }
+                    .disabled(!isBeta)
                 }
                 
                 // MARK: - Credits

@@ -11,9 +11,9 @@ struct TranslationView: View {
     @State private var translateSheet: Bool = false
     
     var body: some View {
-        if #available(iOS 18.0, *) {
+        if #available(iOS 18.0, macOS 15.0, *) {
             newer
-        } else if #available(iOS 17.4, *) {
+        } else if #available(iOS 17.4, macOS 14.4, *) {
             `public`
         } else {
             Text("Unavailable!")

@@ -67,6 +67,7 @@ struct TimerView: View {
                 timer.currentTime += 1
             }
         }
+        #if os(iOS)
         .toolbar {
             if #available(iOS 18.0, *) {
                 ToolbarItem(placement: .topBarTrailing) {
@@ -95,6 +96,7 @@ struct TimerView: View {
                 }
             }
         }
+        #endif
     }
 }
 

@@ -1,5 +1,6 @@
 //Made by Lumaa
 
+#if os(iOS)
 import WidgetKit
 import AppIntents
 
@@ -56,3 +57,4 @@ struct StopTimerIntent: LiveActivityIntent {
         return .result()
     }
 }
+#endif
