@@ -114,11 +114,18 @@ struct ContentView: View {
                             NewTabs()
                         } label: {
                             Label("Sidebar TabView", systemImage: "sidebar.leading")
-                                .foregroundColor(Color.cyan)
+                                .foregroundColor(Color.teal)
                         }
                     } else {
                         Label("Sidebar TabView", systemImage: "sidebar.leading")
                             .foregroundColor(Color.gray)
+                    }
+                    
+                    NavigationLink {
+                        TranslationView()
+                    } label: {
+                        Label("Translation API", systemImage: "translate")
+                            .foregroundColor(Color.cyan)
                     }
                 }
                 
