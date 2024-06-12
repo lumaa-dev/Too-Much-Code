@@ -19,6 +19,7 @@
 		B9406FA42C190CE600E066DB /* Timer_LiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9406FA22C190CE600E066DB /* Timer_LiveActivity.swift */; };
 		B9406FA52C19826500E066DB /* InstaLiveActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FCF71D2B4B05B300F7B766 /* InstaLiveActivityView.swift */; };
 		B9406FA62C19829300E066DB /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9406F9F2C18EC5A00E066DB /* TimerView.swift */; };
+		B9406FA72C1995D900E066DB /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FCF70E2B4AF70100F7B766 /* AppIntent.swift */; };
 		B99032B62BE27390004224DE /* CustomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99032B52BE27390004224DE /* CustomSheetView.swift */; };
 		B99032B92BE291C5004224DE /* BackgroundBattery.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99032B82BE291C5004224DE /* BackgroundBattery.swift */; };
 		B9FCF6EE2B4AF3E200F7B766 /* TestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FCF6ED2B4AF3E200F7B766 /* TestApp.swift */; };
@@ -30,7 +31,6 @@
 		B9FCF7062B4AF70100F7B766 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9FCF7052B4AF70100F7B766 /* SwiftUI.framework */; };
 		B9FCF7092B4AF70100F7B766 /* TMC_WidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FCF7082B4AF70100F7B766 /* TMC_WidgetBundle.swift */; };
 		B9FCF70B2B4AF70100F7B766 /* TMC_WidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FCF70A2B4AF70100F7B766 /* TMC_WidgetLiveActivity.swift */; };
-		B9FCF70D2B4AF70100F7B766 /* TMC_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FCF70C2B4AF70100F7B766 /* TMC_Widget.swift */; };
 		B9FCF70F2B4AF70100F7B766 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FCF70E2B4AF70100F7B766 /* AppIntent.swift */; };
 		B9FCF7112B4AF70400F7B766 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9FCF7102B4AF70400F7B766 /* Assets.xcassets */; };
 		B9FCF7152B4AF70400F7B766 /* TMC-WidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B9FCF7012B4AF70100F7B766 /* TMC-WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -88,7 +88,6 @@
 		B9FCF7052B4AF70100F7B766 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		B9FCF7082B4AF70100F7B766 /* TMC_WidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMC_WidgetBundle.swift; sourceTree = "<group>"; };
 		B9FCF70A2B4AF70100F7B766 /* TMC_WidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMC_WidgetLiveActivity.swift; sourceTree = "<group>"; };
-		B9FCF70C2B4AF70100F7B766 /* TMC_Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMC_Widget.swift; sourceTree = "<group>"; };
 		B9FCF70E2B4AF70100F7B766 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		B9FCF7102B4AF70400F7B766 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9FCF7122B4AF70400F7B766 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -215,7 +214,6 @@
 				B9FCF70A2B4AF70100F7B766 /* TMC_WidgetLiveActivity.swift */,
 				B9FCF71B2B4B04DB00F7B766 /* TMC_LAProgress.swift */,
 				B9406FA22C190CE600E066DB /* Timer_LiveActivity.swift */,
-				B9FCF70C2B4AF70100F7B766 /* TMC_Widget.swift */,
 				B9FCF70E2B4AF70100F7B766 /* AppIntent.swift */,
 				B9FCF7102B4AF70400F7B766 /* Assets.xcassets */,
 				B9FCF7122B4AF70400F7B766 /* Info.plist */,
@@ -338,6 +336,7 @@
 				B90695CB2B54017A0083D05E /* SharedService.swift in Sources */,
 				B9FCF71E2B4B05B300F7B766 /* InstaLiveActivityView.swift in Sources */,
 				B9FCF6EE2B4AF3E200F7B766 /* TestApp.swift in Sources */,
+				B9406FA72C1995D900E066DB /* AppIntent.swift in Sources */,
 				B9FCF71A2B4AF76800F7B766 /* TMC_WidgetLiveActivity.swift in Sources */,
 				B9406F9A2C18D69000E066DB /* TestList.swift in Sources */,
 				B9406F982C18CE8300E066DB /* MagicIconView.swift in Sources */,
@@ -353,7 +352,6 @@
 				B9FCF70F2B4AF70100F7B766 /* AppIntent.swift in Sources */,
 				B9FCF71F2B4B05DD00F7B766 /* TMC_LAProgress.swift in Sources */,
 				B9406FA52C19826500E066DB /* InstaLiveActivityView.swift in Sources */,
-				B9FCF70D2B4AF70100F7B766 /* TMC_Widget.swift in Sources */,
 				B9406FA62C19829300E066DB /* TimerView.swift in Sources */,
 				B9FCF70B2B4AF70100F7B766 /* TMC_WidgetLiveActivity.swift in Sources */,
 			);

@@ -4,6 +4,7 @@
 import SwiftUI
 import WidgetKit
 import ActivityKit
+import AppIntents
 
 struct TimerAttributes: ActivityAttributes {
     public struct ContentState: Codable, Hashable {
@@ -19,6 +20,10 @@ struct Timer_LiveActivity: Widget {
             HStack {
                 Text("Timer")
                     .font(.headline)
+                
+                Button(intent: StopTimerIntent()) {
+                    Image(systemName: "xmark")
+                }
                 
                 Spacer()
                 

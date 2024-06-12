@@ -2,7 +2,7 @@
 
 import SwiftUI
 import Combine
-#if canImport(ActivityKit)
+#if os(iOS)
 import ActivityKit
 #endif
 
@@ -115,7 +115,7 @@ final class AppTimer: ObservableObject, Codable, Equatable, Hashable, Identifiab
 //        }
 //        self.activeTimer = timerObject.autoconnect()
         
-        #if canImport(ActivityKit)
+        #if os(iOS)
         self.startActivity()
         #endif
         
@@ -147,7 +147,7 @@ final class AppTimer: ObservableObject, Codable, Equatable, Hashable, Identifiab
     }
 }
 
-#if canImport(ActivityKit)
+#if os(iOS)
 extension AppTimer {
     func startActivity() {
         endActivity()
