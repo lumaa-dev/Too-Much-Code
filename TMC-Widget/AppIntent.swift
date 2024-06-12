@@ -23,6 +23,28 @@ struct StartTimerIntent: LiveActivityIntent {
     }
 }
 
+struct ToggleTimerIntent: LiveActivityIntent, SetValueIntent {
+    static var title: LocalizedStringResource = "Toggle a timer"
+    static var description = IntentDescription("Enables or disables a 20 seconds test timer")
+    
+    @Parameter(title: "Running")
+    var value: Bool  // The timer’s running state
+    
+    static var isDiscoverable: Bool = false
+    
+    func perform() async throws -> some IntentResult {
+        if !value {
+            AppTimer.shared.stopTimer()
+            AppTimer.shared.endActivity()
+        } else {
+            AppTimer.shared.setDuration(.seconds(20))
+            AppTimer.shared.startTimer()
+        }
+        
+        return .result()
+    }
+}
+
 struct StopTimerIntent: LiveActivityIntent {
     static var title: LocalizedStringResource = "Stop the timer"
     static var description = IntentDescription("Stop any currently active test timer")

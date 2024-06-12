@@ -10,6 +10,10 @@ struct TMC_WidgetBundle: WidgetBundle {
         TMC_WidgetLiveActivity()
         TMC_LAProgress()
         Timer_LiveActivity()
+        
+        if #available(iOS 18, *) {
+            TimerToggle()
+        }
         #endif
     }
 }

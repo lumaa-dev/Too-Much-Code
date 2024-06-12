@@ -4,6 +4,9 @@ import SwiftUI
 #if canImport(UIKit)
 import UIKit
 #endif
+#if canImport(WidgetKit)
+import WidgetKit
+#endif
 
 @main
 struct TestApp: App {
@@ -22,6 +25,15 @@ struct TestApp: App {
                         print("app in fake \(newPhase == .background ? "full bg" : "short bg")")
 //                        BackgroundBattery.main.schedule()
                     }
+                }
+                .onAppear {
+                    #if canImport(WidgetKit)
+                    if #available(iOS 18.0, *) {
+                        ControlCenter.shared.reloadControls(
+                            ofKind: "fr.lumaa.TMC.TimerToggle"
+                        )
+                    }
+                    #endif
                 }
                 #endif
         }

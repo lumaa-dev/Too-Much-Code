@@ -67,6 +67,34 @@ struct TimerView: View {
                 timer.currentTime += 1
             }
         }
+        .toolbar {
+            if #available(iOS 18.0, *) {
+                ToolbarItem(placement: .topBarTrailing) {
+                    NavigationLink {
+                        VStack {
+                            Text("You can add the \"Test Timer\" action in the Control Center or on your Action button thanks to iOS 18")
+                                .padding(.vertical)
+                            
+                            Image("ControlCenter_Gallery")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 150)
+                                .padding(.vertical)
+                            
+                            Image("ControlCenter_Set")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 150)
+                                .padding(.vertical)
+                        }
+                        .navigationTitle("Control Center")
+                        .navigationBarTitleDisplayMode(.inline)
+                    } label: {
+                        Label("Control Center", systemImage: "widget.small.badge.plus")
+                    }
+                }
+            }
+        }
     }
 }
 

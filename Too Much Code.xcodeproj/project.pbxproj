@@ -20,6 +20,8 @@
 		B9406FA52C19826500E066DB /* InstaLiveActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FCF71D2B4B05B300F7B766 /* InstaLiveActivityView.swift */; };
 		B9406FA62C19829300E066DB /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9406F9F2C18EC5A00E066DB /* TimerView.swift */; };
 		B9406FA72C1995D900E066DB /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FCF70E2B4AF70100F7B766 /* AppIntent.swift */; };
+		B9406FA92C1999B400E066DB /* Timer_Control.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9406FA82C1999B400E066DB /* Timer_Control.swift */; };
+		B9406FAA2C1999B400E066DB /* Timer_Control.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9406FA82C1999B400E066DB /* Timer_Control.swift */; };
 		B99032B62BE27390004224DE /* CustomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99032B52BE27390004224DE /* CustomSheetView.swift */; };
 		B99032B92BE291C5004224DE /* BackgroundBattery.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99032B82BE291C5004224DE /* BackgroundBattery.swift */; };
 		B9FCF6EE2B4AF3E200F7B766 /* TestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FCF6ED2B4AF3E200F7B766 /* TestApp.swift */; };
@@ -74,6 +76,7 @@
 		B9406F9B2C18DCC700E066DB /* NewTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTabs.swift; sourceTree = "<group>"; };
 		B9406F9F2C18EC5A00E066DB /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		B9406FA22C190CE600E066DB /* Timer_LiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer_LiveActivity.swift; sourceTree = "<group>"; };
+		B9406FA82C1999B400E066DB /* Timer_Control.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer_Control.swift; sourceTree = "<group>"; };
 		B99032B52BE27390004224DE /* CustomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSheetView.swift; sourceTree = "<group>"; };
 		B99032B82BE291C5004224DE /* BackgroundBattery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundBattery.swift; sourceTree = "<group>"; };
 		B9DC69272B7783A100E625B9 /* Too-Much-Code-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Too-Much-Code-Info.plist"; sourceTree = "<group>"; };
@@ -214,6 +217,7 @@
 				B9FCF70A2B4AF70100F7B766 /* TMC_WidgetLiveActivity.swift */,
 				B9FCF71B2B4B04DB00F7B766 /* TMC_LAProgress.swift */,
 				B9406FA22C190CE600E066DB /* Timer_LiveActivity.swift */,
+				B9406FA82C1999B400E066DB /* Timer_Control.swift */,
 				B9FCF70E2B4AF70100F7B766 /* AppIntent.swift */,
 				B9FCF7102B4AF70400F7B766 /* Assets.xcassets */,
 				B9FCF7122B4AF70400F7B766 /* Info.plist */,
@@ -340,6 +344,7 @@
 				B9FCF71A2B4AF76800F7B766 /* TMC_WidgetLiveActivity.swift in Sources */,
 				B9406F9A2C18D69000E066DB /* TestList.swift in Sources */,
 				B9406F982C18CE8300E066DB /* MagicIconView.swift in Sources */,
+				B9406FA92C1999B400E066DB /* Timer_Control.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +359,7 @@
 				B9406FA52C19826500E066DB /* InstaLiveActivityView.swift in Sources */,
 				B9406FA62C19829300E066DB /* TimerView.swift in Sources */,
 				B9FCF70B2B4AF70100F7B766 /* TMC_WidgetLiveActivity.swift in Sources */,
+				B9406FAA2C1999B400E066DB /* Timer_Control.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
