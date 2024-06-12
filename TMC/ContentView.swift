@@ -135,6 +135,14 @@ struct ContentView: View {
                             .foregroundColor(Color.indigo)
                     }
                     .disabled(!isBeta)
+                    
+                    NavigationLink {
+                        MeshGradientView()
+                    } label: {
+                        Label("MeshGradient", systemImage: "paintpalette.fill")
+                            .foregroundStyle(LinearGradient(colors: [.red, .indigo, Color(uiColor: UIColor.label), .orange, .blue, .green], startPoint: .leading, endPoint: .trailing))
+                    }
+                    .disabled(!isBeta)
                 }
                 
                 // MARK: - Credits
