@@ -29,7 +29,6 @@ struct TMC_LAProgress: Widget {
             }
             .activityBackgroundTint(Color.black)
             .activitySystemActionForegroundColor(Color.white)
-            
         } dynamicIsland: { context in
             DynamicIsland {
                 DynamicIslandExpandedRegion(.bottom) {

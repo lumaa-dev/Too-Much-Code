@@ -46,6 +46,8 @@ struct ContentView: View {
                                 .foregroundStyle(LinearGradient(colors: [.yellow, .red, .purple], startPoint: .leading, endPoint: .trailing))
                         }
                     
+                        
+                    
                     #else
                         Label(String("Live Activity"), systemImage: "clock.badge.fill")
                             .foregroundStyle(.gray)
@@ -53,6 +55,14 @@ struct ContentView: View {
                         Label(String("Instagram Live Activity"), systemImage: "camera.badge.clock.fill")
                             .foregroundStyle(.gray)
                     #endif
+                    
+                    NavigationLink {
+                        TimerView()
+                            .tint(Color.orange)
+                    } label: {
+                        Label(String("Timer"), systemImage: "timer")
+                            .foregroundStyle(Color.orange)
+                    }
                 }
                 
                 Section(header: Text(String("UIKit"))) {

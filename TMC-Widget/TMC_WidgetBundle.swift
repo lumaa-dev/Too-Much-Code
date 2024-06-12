@@ -11,6 +11,7 @@ struct TMC_WidgetBundle: WidgetBundle {
         #if os(iOS)
         TMC_WidgetLiveActivity()
         TMC_LAProgress()
+        Timer_LiveActivity()
         #endif
     }
 }
