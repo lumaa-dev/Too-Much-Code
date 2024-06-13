@@ -20,7 +20,7 @@ struct TextRendererView: View {
                 if isVisible {
                     let rendered = Text("Lumaa")
                         .customAttribute(CustomTextAttribute())
-                        .foregroundStyle(rendererActive ? Color.blue.gradient : Color(uiColor: UIColor.label).gradient)
+                        .foregroundStyle(rendererActive ? Color.blue.gradient : Color.label.gradient)
                         .font(.title2)
                         .bold(rendererActive)
                     

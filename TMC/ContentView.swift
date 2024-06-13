@@ -140,7 +140,7 @@ struct ContentView: View {
                         MeshGradientView()
                     } label: {
                         Label("MeshGradient", systemImage: "paintpalette.fill")
-                            .foregroundStyle(LinearGradient(colors: [.red, .indigo, Color(uiColor: UIColor.label), .orange, .blue, .green], startPoint: .leading, endPoint: .trailing))
+                            .foregroundStyle(LinearGradient(colors: [.red, .orange, .yellow, .green, .blue, .purple], startPoint: .leading, endPoint: .trailing))
                     }
                     .disabled(!isBeta)
                 }

@@ -12,7 +12,7 @@ struct MeshGradientView: View {
                 .init(0, 1), .init(0.92, 1), .init(1, 1)
             ], colors: [
                 .red, .purple, .indigo,
-                .orange, Color(uiColor: UIColor.label), .blue,
+                .orange, Color.label, .blue,
                 .yellow, .green, .mint
             ])
             .ignoresSafeArea()
@@ -20,6 +20,14 @@ struct MeshGradientView: View {
             Text("Unavailable!")
         }
     }
+}
+
+extension Color {
+    #if os(iOS)
+    static let label: Color = Color(uiColor: UIColor.label)
+    #else
+    static let label: Color = Color(nsColor: NSColor.labelColor)
+    #endif
 }
 
 #Preview {
