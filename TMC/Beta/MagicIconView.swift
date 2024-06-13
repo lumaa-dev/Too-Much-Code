@@ -18,12 +18,13 @@ struct MagicIconView: View {
     @available(iOS 18.0, macOS 15.0, *)
     var switcher: some View {
         VStack {
-            Image(systemName: currentIcon)
-                .resizable()
-                .scaledToFit()
+            // apparently, using label is better? no difference for me?
+            Label("Icon", systemImage: currentIcon)
+                .font(.system(size: 80))
+                .frame(width: 150, height: 150, alignment: .center)
                 .contentTransition(.symbolEffect(.replace.magic(fallback: .offUp.byLayer)))
-                .frame(width: 100, height: 100)
                 .background(hasBg ? Color.gray.opacity(0.35) : Color.clear)
+                .labelStyle(.iconOnly)
             
             Spacer()
                 .frame(height: 40)
