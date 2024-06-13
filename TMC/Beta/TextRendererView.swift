@@ -4,25 +4,29 @@ import SwiftUI
 
 struct TextRendererView: View {
     @State private var isVisible: Bool = true
+    @State private var rendererActive: Bool = true
     
     var body: some View {
         if #available(iOS 18.0, macOS 15.0, *) {
             VStack {
                 GroupBox {
-                    Toggle("Visible", isOn: $isVisible.animation())
+                    Toggle("Visible", isOn: $isVisible.animation(.easeInOut))
+                    Toggle("isActive", isOn: $rendererActive.animation(.easeInOut))
                 }
+                .padding(.horizontal)
                 
                 Spacer()
                 
                 if isVisible {
                     let rendered = Text("Lumaa")
                         .customAttribute(CustomTextAttribute())
-                        .foregroundStyle(Color.blue.gradient)
-                        .font(.title2.bold())
+                        .foregroundStyle(rendererActive ? Color.blue.gradient : Color(uiColor: UIColor.label).gradient)
+                        .font(.title2)
+                        .bold(rendererActive)
                     
                     Text("Hello from \(rendered)!")
                         .font(.title2)
-                        .transition(TextTransition())
+                        .transition(TextTransition(isActive: rendererActive))
                 }
                 
                 Spacer()
@@ -38,18 +42,21 @@ struct CustomTextAttribute: TextAttribute {}
 
 @available(iOS 18.0, macOS 15.0, *)
 struct CustomTextRenderer: TextRenderer, Animatable {
-    
     var elapsedTime: TimeInterval
     var elementDuration: TimeInterval
     var totalDuration: TimeInterval
+    
+    var isActive: Bool = true
+    
     var spring: Spring {
-        .snappy(duration: elementDuration - 0.05, extraBounce: 0.4)
+        .smooth(duration: elementDuration - 0.05, extraBounce: 0.0)
     }
     
-    init(elapsedTime: TimeInterval, elementDuration: Double = 0.4, totalDuration: TimeInterval) {
+    init(elapsedTime: TimeInterval, elementDuration: Double = 0.4, totalDuration: TimeInterval, isActive: Bool = true) {
         self.elapsedTime = min(elapsedTime, totalDuration)
         self.elementDuration = min(elementDuration, totalDuration)
         self.totalDuration = totalDuration
+        self.isActive = isActive
     }
     
     var animatableData: Double {
@@ -59,7 +66,7 @@ struct CustomTextRenderer: TextRenderer, Animatable {
     
     func draw(layout: Text.Layout, in context: inout GraphicsContext) {
         for run in layout.flattenedRuns {
-            if run[CustomTextAttribute.self] != nil {
+            if run[CustomTextAttribute.self] != nil && isActive {
                 let delay = elementDelay(count: run.count)
                 
                 for (index, slice) in run.enumerated() {
@@ -98,7 +105,7 @@ struct CustomTextRenderer: TextRenderer, Animatable {
         
         // The y-translation derives from a spring, which requires a
         // time in seconds.
-        let translationY = spring.value(fromValue: -slice.typographicBounds.descent, toValue: 0, initialVelocity: 0, time: time)
+        let translationY = spring.value(fromValue: -slice.typographicBounds.descent - 25, toValue: 0, initialVelocity: 0, time: time)
         
         context.translateBy(x: 0, y: translationY)
         context.addFilter(.blur(radius: blurRadius))
@@ -130,6 +137,8 @@ extension Text.Layout {
 
 @available(iOS 18.0, macOS 15.0, *)
 struct TextTransition: Transition {
+    var isActive: Bool = true
+    
     static var properties: TransitionProperties {
         TransitionProperties(hasMotion: true)
     }
@@ -139,7 +148,8 @@ struct TextTransition: Transition {
         let elapsedTime = phase.isIdentity ? duration : 0
         let renderer = CustomTextRenderer(
             elapsedTime: elapsedTime,
-            totalDuration: duration
+            totalDuration: duration,
+            isActive: isActive
         )
         
         content.transaction { transaction in
