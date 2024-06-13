@@ -20,7 +20,7 @@ struct TextRendererView: View {
                         .foregroundStyle(Color.blue.gradient)
                         .font(.title2.bold())
                     
-                    Text("Hello, \(rendered)!")
+                    Text("Hello from \(rendered)!")
                         .font(.title2)
                         .transition(TextTransition())
                 }
