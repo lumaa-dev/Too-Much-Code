@@ -47,6 +47,11 @@ struct TestApp: App {
                 TestView()
             }
         }
+
+        MenuBarExtra("TMC", systemImage: "filemenu.and.cursorarrow") {
+            DockToggleView()
+        }
+        .menuBarExtraStyle(.menu)
         #endif
     }
 }

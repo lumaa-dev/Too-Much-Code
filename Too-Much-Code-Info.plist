@@ -2,6 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSAccessorySetupBluetoothServices</key>
+	<array>
+		<string>0000FD7D-0000-1000-8000-00805F9B34FB</string>
+		<string>110B</string>
+	</array>
+	<key>NSAccessorySetupKitSupports</key>
+	<array>
+		<string>Bluetooth</string>
+	</array>
 	<key>NSBonjourServices</key>
 	<array>
 		<string>_bonjour._tcp</string>

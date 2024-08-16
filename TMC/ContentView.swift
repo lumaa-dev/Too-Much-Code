@@ -65,18 +65,30 @@ struct ContentView: View {
                     }
                 }
                 
-                Section(header: Text(String("UIKit"))) {
+                Section(header: Text(String("UIKit & AppKit"))) {
                     #if os(iOS)
                         NavigationLink {
                             CustomSheetView()
                                 .tint(Color.purple)
                         } label: {
-                            Label(String("Sheets"), systemImage: "rectangle.stack")
+                            Label(String("iOS Sheets"), systemImage: "rectangle.stack")
                                 .foregroundStyle(Color.purple)
                         }
                     #else
-                        Label(String("Sheets"), systemImage: "rectangle.stack")
+                        Label(String("iOS Sheets"), systemImage: "rectangle.stack")
                             .foregroundStyle(.gray)
+                    #endif
+
+                    #if os(macOS)
+                    NavigationLink {
+                        AgentView()
+                    } label: {
+                        Label(String("Menu Bar"), systemImage: "filemenu.and.cursorarrow")
+                            .foregroundStyle(Color(nsColor: NSColor.labelColor))
+                    }
+                    #else
+                    Label(String("Menu Bar"), systemImage: "filemenu.and.cursorarrow")
+                        .foregroundStyle(Color.gray)
                     #endif
                 }
                 
@@ -96,7 +108,7 @@ struct ContentView: View {
                     Button {
                         openWindow(id: "test-utility")
                     } label: {
-                        Label("Utility Window (macOS)", systemImage: "macwindow")
+                        Label("Utility Window", systemImage: "macwindow")
                     }
                     .disabled(!isMac && isBeta)
                     .foregroundColor(!isMac && isBeta ? Color.gray : Color.blue)
@@ -127,7 +139,8 @@ struct ContentView: View {
                         Label("Translation API", systemImage: "translate")
                             .foregroundColor(Color.cyan)
                     }
-                    
+                    .disabled(!isBeta)
+
                     NavigationLink {
                         TextRendererView()
                     } label: {
@@ -143,6 +156,23 @@ struct ContentView: View {
                             .foregroundStyle(LinearGradient(colors: [.red, .orange, .yellow, .green, .blue, .purple], startPoint: .leading, endPoint: .trailing))
                     }
                     .disabled(!isBeta)
+
+                    #if canImport(AccessorySetupKit)
+                    NavigationLink {
+                        if #available(iOS 18.0, *) {
+                            SetupAccessory()
+                        } else {
+                            Text("Unavailable!")
+                        }
+                    } label: {
+                        Label("SetupAccessory with AirPods", systemImage: "airpods.pro")
+                            .foregroundColor(Color.blue)
+                    }
+                    .disabled(!isBeta || isMac)
+                    #else
+                    Label("SetupAccessory with AirPods", systemImage: "airpods.pro")
+                        .foregroundColor(Color.gray)
+                    #endif
                 }
                 
                 // MARK: - Credits
