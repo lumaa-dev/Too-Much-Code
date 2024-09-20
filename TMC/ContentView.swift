@@ -173,6 +173,24 @@ struct ContentView: View {
                     Label("SetupAccessory with AirPods", systemImage: "airpods.pro")
                         .foregroundColor(Color.gray)
                     #endif
+
+                    #if os(macOS)
+                    if #available(macOS 15.0, *) {
+                        NavigationLink {
+                            ImageGradient()
+                        } label: {
+                            Label("ImageGradient", systemImage: "paintpalette.fill")
+                                .foregroundStyle(LinearGradient(colors: [.red, .orange, .yellow, .green, .blue, .purple], startPoint: .leading, endPoint: .trailing))
+                        }
+                        .disabled(!isBeta && isMac)
+                    } else {
+                        Label("ImageGradient", systemImage: "paintpalette.fill")
+                            .foregroundStyle(Color.gray)
+                    }
+                    #else
+                    Label("ImageGradient", systemImage: "paintpalette.fill")
+                        .foregroundStyle(Color.gray)
+                    #endif
                 }
                 
                 // MARK: - Credits
