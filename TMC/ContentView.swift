@@ -90,6 +90,19 @@ struct ContentView: View {
                     Label(String("Menu Bar"), systemImage: "filemenu.and.cursorarrow")
                         .foregroundStyle(Color.gray)
                     #endif
+
+#if os(iOS)
+                    NavigationLink {
+                        CameraView()
+                            .tint(Color.blue)
+                    } label: {
+                        Label(String("Camera"), systemImage: "camera.fill")
+                            .foregroundStyle(Color.blue)
+                    }
+#else
+                    Label(String("Camera"), systemImage: "camera.fill")
+                        .foregroundStyle(.gray)
+#endif
                 }
                 
                 Section(header: Text(String("Device Communication"))) {
