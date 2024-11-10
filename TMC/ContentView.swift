@@ -28,6 +28,14 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             List {
+                Section(header: Text("UI Tests")) {
+                    NavigationLink {
+                        CalcView()
+                    } label: {
+                        Label("Calculator", systemImage: "1.circle")
+                    }
+                }
+
                 Section(header: Text(String("Live Activities"))) {
                     #if os(iOS)
                         NavigationLink {

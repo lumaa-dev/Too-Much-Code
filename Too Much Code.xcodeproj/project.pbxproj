@@ -30,6 +30,7 @@
 		B98669372C9ECC0100E00A70 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98669362C9ECC0100E00A70 /* CameraView.swift */; };
 		B99032B62BE27390004224DE /* CustomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99032B52BE27390004224DE /* CustomSheetView.swift */; };
 		B99032B92BE291C5004224DE /* BackgroundBattery.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99032B82BE291C5004224DE /* BackgroundBattery.swift */; };
+		B9A9192F2CE135B5004FFC75 /* CalcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A9192E2CE135B5004FFC75 /* CalcView.swift */; };
 		B9CC7CEE2C371E9500CD1925 /* SetupAccessory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CC7CED2C371E9500CD1925 /* SetupAccessory.swift */; };
 		B9D051BF2C6F9F23000BD3BB /* AgentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D051BE2C6F9F1D000BD3BB /* AgentManager.swift */; };
 		B9D051C12C6FA09A000BD3BB /* AgentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D051C02C6FA09A000BD3BB /* AgentView.swift */; };
@@ -94,6 +95,7 @@
 		B98669362C9ECC0100E00A70 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		B99032B52BE27390004224DE /* CustomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSheetView.swift; sourceTree = "<group>"; };
 		B99032B82BE291C5004224DE /* BackgroundBattery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundBattery.swift; sourceTree = "<group>"; };
+		B9A9192E2CE135B5004FFC75 /* CalcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcView.swift; sourceTree = "<group>"; };
 		B9CC7CED2C371E9500CD1925 /* SetupAccessory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAccessory.swift; sourceTree = "<group>"; };
 		B9D051BE2C6F9F1D000BD3BB /* AgentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentManager.swift; sourceTree = "<group>"; };
 		B9D051C02C6FA09A000BD3BB /* AgentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentView.swift; sourceTree = "<group>"; };
@@ -190,6 +192,14 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
+		B9A9192D2CE135A9004FFC75 /* TestUI */ = {
+			isa = PBXGroup;
+			children = (
+				B9A9192E2CE135B5004FFC75 /* CalcView.swift */,
+			);
+			path = TestUI;
+			sourceTree = "<group>";
+		};
 		B9FCF6E12B4AF3E200F7B766 = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +224,7 @@
 		B9FCF6EC2B4AF3E200F7B766 /* TMC */ = {
 			isa = PBXGroup;
 			children = (
+				B9A9192D2CE135A9004FFC75 /* TestUI */,
 				B9406F942C18CA1A00E066DB /* Beta */,
 				B99032B72BE287A6004224DE /* UIKit */,
 				B90695C72B53FEE60083D05E /* DeviceCom */,
@@ -363,6 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9406FA42C190CE600E066DB /* Timer_LiveActivity.swift in Sources */,
+				B9A9192F2CE135B5004FFC75 /* CalcView.swift in Sources */,
 				B9406FA02C18EC5D00E066DB /* TimerView.swift in Sources */,
 				B90695C92B53FF590083D05E /* BatteryView.swift in Sources */,
 				B9FCF6FC2B4AF53800F7B766 /* LiveActivityView.swift in Sources */,
