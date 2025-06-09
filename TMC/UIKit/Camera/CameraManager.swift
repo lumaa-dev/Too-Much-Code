@@ -1,5 +1,5 @@
 // Made by Lumaa
-
+#if canImport(UIKit)
 import SwiftUI
 import UIKit
 import Foundation
@@ -169,3 +169,4 @@ protocol CameraSource {
 protocol CameraTarget {
     func setSession(_ session: AVCaptureSession)
 }
+#endif

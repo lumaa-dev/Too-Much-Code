@@ -107,9 +107,29 @@ struct ContentView: View {
                         Label(String("Camera"), systemImage: "camera.fill")
                             .foregroundStyle(Color.blue)
                     }
+
+                    NavigationLink {
+                        PhotosCameraView(selectedImage: .constant(.controlCenterSet))
+                            .tint(Color.blue)
+                    } label: {
+                        Label(String("Photos Camera"), systemImage: "camera.fill")
+                            .foregroundStyle(Color.blue)
+                    }
 #else
-                    Label(String("Camera"), systemImage: "camera.fill")
+                    Label(String("Camera & Photos Camera"), systemImage: "camera.fill")
                         .foregroundStyle(.gray)
+#endif
+
+#if canImport(UIKit)
+                    NavigationLink {
+                        FirstView()
+                    } label: {
+                        Label(String("First UIKit view"), systemImage: "1.circle.fill")
+                            .foregroundStyle(Color.yellow)
+                    }
+#else
+                    Label(String("First UIKit view"), systemImage: "1.circle.fill")
+                        .foregroundStyle(Color.gray)
 #endif
                 }
                 
@@ -178,7 +198,7 @@ struct ContentView: View {
                     }
                     .disabled(!isBeta)
 
-                    #if canImport(AccessorySetupKit)
+                    #if os(iOS)
                     NavigationLink {
                         if #available(iOS 18.0, *) {
                             SetupAccessory()

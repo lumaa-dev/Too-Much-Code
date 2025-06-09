@@ -1,5 +1,5 @@
 // Made by Lumaa
-
+#if os(iOS)
 import SwiftUI
 
 struct CameraView: View {
@@ -36,3 +36,4 @@ struct CameraView: View {
 #Preview {
     CameraView()
 }
+#endif

@@ -1,8 +1,8 @@
 //Made by Lumaa
+#if os(iOS)
 
 import SwiftUI
 import CoreBluetooth
-#if canImport(AccessorySetupKit)
 import AccessorySetupKit
 
 @available(iOS 18.0, *)
@@ -139,7 +139,8 @@ struct SetupAccessory: View {
 class BluetoothManager: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
     var centralManager: CBCentralManager?
     var airPodsPeripheral: CBPeripheral?
-    
+
+    static let arduinoServiceUUID = CBUUID(string: "0000FD7D-0000-1000-8000-00805F9B34FB")
     static let airPodsServiceUUID = CBUUID(string: "0000FD7D-0000-1000-8000-00805F9B34FB")
     static let smthServiceUUID = CBUUID(string: "110B")
     
