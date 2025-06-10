@@ -33,6 +33,7 @@
 		B99032B92BE291C5004224DE /* BackgroundBattery.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99032B82BE291C5004224DE /* BackgroundBattery.swift */; };
 		B99C35BC2CE8BF1C006F9C87 /* PhotosCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99C35BB2CE8BF1C006F9C87 /* PhotosCameraView.swift */; };
 		B9A9192F2CE135B5004FFC75 /* CalcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A9192E2CE135B5004FFC75 /* CalcView.swift */; };
+		B9C1433A2DF784EE001E89CA /* LiquidGlassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C143392DF784EE001E89CA /* LiquidGlassView.swift */; };
 		B9CC7CEE2C371E9500CD1925 /* SetupAccessory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CC7CED2C371E9500CD1925 /* SetupAccessory.swift */; };
 		B9D051BF2C6F9F23000BD3BB /* AgentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D051BE2C6F9F1D000BD3BB /* AgentManager.swift */; };
 		B9D051C12C6FA09A000BD3BB /* AgentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D051C02C6FA09A000BD3BB /* AgentView.swift */; };
@@ -100,6 +101,7 @@
 		B99032B82BE291C5004224DE /* BackgroundBattery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundBattery.swift; sourceTree = "<group>"; };
 		B99C35BB2CE8BF1C006F9C87 /* PhotosCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCameraView.swift; sourceTree = "<group>"; };
 		B9A9192E2CE135B5004FFC75 /* CalcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcView.swift; sourceTree = "<group>"; };
+		B9C143392DF784EE001E89CA /* LiquidGlassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiquidGlassView.swift; sourceTree = "<group>"; };
 		B9CC7CED2C371E9500CD1925 /* SetupAccessory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAccessory.swift; sourceTree = "<group>"; };
 		B9D051BE2C6F9F1D000BD3BB /* AgentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentManager.swift; sourceTree = "<group>"; };
 		B9D051C02C6FA09A000BD3BB /* AgentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentView.swift; sourceTree = "<group>"; };
@@ -206,6 +208,14 @@
 			path = TestUI;
 			sourceTree = "<group>";
 		};
+		B9C143382DF784DE001E89CA /* 26 */ = {
+			isa = PBXGroup;
+			children = (
+				B9C143392DF784EE001E89CA /* LiquidGlassView.swift */,
+			);
+			path = 26;
+			sourceTree = "<group>";
+		};
 		B9FCF6E12B4AF3E200F7B766 = {
 			isa = PBXGroup;
 			children = (
@@ -230,6 +240,7 @@
 		B9FCF6EC2B4AF3E200F7B766 /* TMC */ = {
 			isa = PBXGroup;
 			children = (
+				B9C143382DF784DE001E89CA /* 26 */,
 				B9A9192D2CE135A9004FFC75 /* TestUI */,
 				B9406F942C18CA1A00E066DB /* 18 */,
 				B99032B72BE287A6004224DE /* UIKit */,
@@ -409,6 +420,7 @@
 				B9406F982C18CE8300E066DB /* MagicIconView.swift in Sources */,
 				B9CC7CEE2C371E9500CD1925 /* SetupAccessory.swift in Sources */,
 				B9406FA92C1999B400E066DB /* Timer_Control.swift in Sources */,
+				B9C1433A2DF784EE001E89CA /* LiquidGlassView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

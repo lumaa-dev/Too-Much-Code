@@ -14,7 +14,7 @@ struct ContentView: View {
     }
     
     var isBeta: Bool {
-        if #available(iOS 18.0, macOS 15.0, *) {
+        if #available(iOS 26.0, macOS 26.0, *) {
             return true
         } else {
             return false
@@ -22,7 +22,7 @@ struct ContentView: View {
     }
     
     private var newOSString: String {
-        isMac ? "macOS Sequoia" : "iOS 18"
+        isMac ? "macOS Tahoe" : "iOS 26"
     }
     
     var body: some View {
@@ -142,10 +142,7 @@ struct ContentView: View {
                     }
                 }
                 
-                Section(header: Text("New \(newOSString) content")) {
-                    Text("This section is enabled for users using a \(newOSString) beta.")
-                        .listRowBackground(Rectangle().fill(Color.red.gradient))
-                    
+                Section {
                     Button {
                         openWindow(id: "test-utility")
                     } label: {
@@ -233,7 +230,23 @@ struct ContentView: View {
                         .foregroundStyle(Color.gray)
                     #endif
                 }
-                
+
+                Section(header: Text("New \(newOSString) content")) {
+                    Text("This section is enabled for users using a \(newOSString) beta.")
+                        .listRowBackground(Rectangle().fill(Color.red.gradient))
+
+                    if #available(iOS 26.0, macOS 26.0, *) {
+                        NavigationLink {
+                            LiquidGlassView()
+                        } label: {
+                            Label("Liquid Glass Nav", systemImage: "wineglass")
+                        }
+                    } else {
+                        Label("Liquid Glass Nav", systemImage: "wineglass")
+                            .foregroundStyle(Color.secondary)
+                    }
+                }
+
                 // MARK: - Credits
                 Section(header: Text(String("Credits"))) {
                     Link(destination: URL(string: "https://techhub.social/@lumaa")!) {
