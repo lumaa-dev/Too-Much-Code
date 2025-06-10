@@ -133,12 +133,19 @@ struct ContentView: View {
 #endif
                 }
                 
-                Section(header: Text(String("Device Communication"))) {
+                Section(header: Text(String("Communication"))) {
                     NavigationLink {
                         BatteryView()
                     } label: {
                         Label(String("Battery Connectivity"), systemImage: "battery.75percent")
                             .foregroundStyle(.green)
+                    }
+
+                    NavigationLink {
+                        URLSessionView()
+                    } label: {
+                        Label(String("URLSession test"), systemImage: "square.and.arrow.up")
+                            .foregroundStyle(Color.orange)
                     }
                 }
                 
