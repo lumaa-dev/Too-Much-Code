@@ -5,22 +5,23 @@ import SwiftUI
 @available(iOS 26.0, *)
 struct LiquidGlassView: View {
     var body: some View {
-        NavigationStack {
-            TabView {
-                Tab {
-                    firstView
-                } label: {
-                    Label("First", systemImage: "1.circle")
-                }
-
-                Tab {
-                    secondView
-                } label: {
-                    Label("Best", systemImage: "2.circle")
-                }
+        TabView {
+            Tab {
+                firstView
+            } label: {
+                Label("First", systemImage: "1.circle")
             }
-            .tabBarMinimizeBehavior(.onScrollDown)
+
+            Tab {
+                secondView
+            } label: {
+                Label("Best", systemImage: "2.circle")
+            }
         }
+        .tabBarMinimizeBehavior(.onScrollDown)
+        .navigationTitle(Text("Nav Title"))
+        .navigationSubtitle(Text("New subtitle wow!"))
+        .navigationBarTitleDisplayMode(.inline)
     }
 
     private var firstView: some View {
@@ -34,7 +35,5 @@ struct LiquidGlassView: View {
                     .buttonStyle(.glass)
             }
         }
-        .navigationTitle(Text("Nav Title"))
-        .navigationSubtitle(Text("New subtitle wow!"))
     }
 }
