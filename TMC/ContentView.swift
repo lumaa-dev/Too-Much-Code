@@ -149,7 +149,7 @@ struct ContentView: View {
                     }
                 }
                 
-                Section {
+                Section(header: Text("iOS 18 content")) {
                     Button {
                         openWindow(id: "test-utility")
                     } label: {
