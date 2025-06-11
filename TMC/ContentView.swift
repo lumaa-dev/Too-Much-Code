@@ -252,6 +252,17 @@ struct ContentView: View {
                         Label("Liquid Glass Nav", systemImage: "wineglass")
                             .foregroundStyle(Color.secondary)
                     }
+
+                    if #available(iOS 26.0, macOS 26.0, *) {
+                        NavigationLink {
+                            IntelligenceView()
+                        } label: {
+                            Label("Apple Intelligence Chat", systemImage: "apple.intelligence")
+                        }
+                    } else {
+                        Label("Apple Intelligence Chat", systemImage: "apple.intelligence")
+                            .foregroundStyle(Color.secondary)
+                    }
                 }
 
                 // MARK: - Credits

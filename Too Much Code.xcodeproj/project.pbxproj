@@ -33,7 +33,9 @@
 		B99032B92BE291C5004224DE /* BackgroundBattery.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99032B82BE291C5004224DE /* BackgroundBattery.swift */; };
 		B99C35BC2CE8BF1C006F9C87 /* PhotosCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99C35BB2CE8BF1C006F9C87 /* PhotosCameraView.swift */; };
 		B9A9192F2CE135B5004FFC75 /* CalcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A9192E2CE135B5004FFC75 /* CalcView.swift */; };
+		B9BDD9872DF9A29C008E51DC /* IntelligenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BDD9862DF9A29C008E51DC /* IntelligenceView.swift */; };
 		B9C1433A2DF784EE001E89CA /* LiquidGlassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C143392DF784EE001E89CA /* LiquidGlassView.swift */; };
+		B9C2BED52DF8B9B6003F0F83 /* URLSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C2BED42DF8B9B6003F0F83 /* URLSessionView.swift */; };
 		B9CC7CEE2C371E9500CD1925 /* SetupAccessory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CC7CED2C371E9500CD1925 /* SetupAccessory.swift */; };
 		B9D051BF2C6F9F23000BD3BB /* AgentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D051BE2C6F9F1D000BD3BB /* AgentManager.swift */; };
 		B9D051C12C6FA09A000BD3BB /* AgentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D051C02C6FA09A000BD3BB /* AgentView.swift */; };
@@ -101,7 +103,9 @@
 		B99032B82BE291C5004224DE /* BackgroundBattery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundBattery.swift; sourceTree = "<group>"; };
 		B99C35BB2CE8BF1C006F9C87 /* PhotosCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCameraView.swift; sourceTree = "<group>"; };
 		B9A9192E2CE135B5004FFC75 /* CalcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcView.swift; sourceTree = "<group>"; };
+		B9BDD9862DF9A29C008E51DC /* IntelligenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntelligenceView.swift; sourceTree = "<group>"; };
 		B9C143392DF784EE001E89CA /* LiquidGlassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiquidGlassView.swift; sourceTree = "<group>"; };
+		B9C2BED42DF8B9B6003F0F83 /* URLSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionView.swift; sourceTree = "<group>"; };
 		B9CC7CED2C371E9500CD1925 /* SetupAccessory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupAccessory.swift; sourceTree = "<group>"; };
 		B9D051BE2C6F9F1D000BD3BB /* AgentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentManager.swift; sourceTree = "<group>"; };
 		B9D051C02C6FA09A000BD3BB /* AgentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentView.swift; sourceTree = "<group>"; };
@@ -154,15 +158,16 @@
 			path = LiveActivities;
 			sourceTree = "<group>";
 		};
-		B90695C72B53FEE60083D05E /* DeviceCom */ = {
+		B90695C72B53FEE60083D05E /* Com */ = {
 			isa = PBXGroup;
 			children = (
 				B90695C82B53FF590083D05E /* BatteryView.swift */,
 				B90695CA2B54017A0083D05E /* SharedService.swift */,
 				B99032B82BE291C5004224DE /* BackgroundBattery.swift */,
 				B9CC7CED2C371E9500CD1925 /* SetupAccessory.swift */,
+				B9C2BED42DF8B9B6003F0F83 /* URLSessionView.swift */,
 			);
-			path = DeviceCom;
+			path = Com;
 			sourceTree = "<group>";
 		};
 		B9406F942C18CA1A00E066DB /* 18 */ = {
@@ -212,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				B9C143392DF784EE001E89CA /* LiquidGlassView.swift */,
+				B9BDD9862DF9A29C008E51DC /* IntelligenceView.swift */,
 			);
 			path = 26;
 			sourceTree = "<group>";
@@ -244,7 +250,7 @@
 				B9A9192D2CE135A9004FFC75 /* TestUI */,
 				B9406F942C18CA1A00E066DB /* 18 */,
 				B99032B72BE287A6004224DE /* UIKit */,
-				B90695C72B53FEE60083D05E /* DeviceCom */,
+				B90695C72B53FEE60083D05E /* Com */,
 				B90695C62B53FED00083D05E /* LiveActivities */,
 				B9FCF6EF2B4AF3E200F7B766 /* ContentView.swift */,
 				B9406F952C18CA4E00E066DB /* TestView.swift */,
@@ -391,11 +397,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9406FA42C190CE600E066DB /* Timer_LiveActivity.swift in Sources */,
+				B9C2BED52DF8B9B6003F0F83 /* URLSessionView.swift in Sources */,
 				B9A9192F2CE135B5004FFC75 /* CalcView.swift in Sources */,
 				B9406FA02C18EC5D00E066DB /* TimerView.swift in Sources */,
 				B935AC432CBBE4E400A19CC6 /* EasyView.swift in Sources */,
 				B90695C92B53FF590083D05E /* BatteryView.swift in Sources */,
 				B9FCF6FC2B4AF53800F7B766 /* LiveActivityView.swift in Sources */,
+				B9BDD9872DF9A29C008E51DC /* IntelligenceView.swift in Sources */,
 				B9406FAE2C19B0B300E066DB /* TextRendererView.swift in Sources */,
 				B9406F962C18CA4E00E066DB /* TestView.swift in Sources */,
 				B99032B62BE27390004224DE /* CustomSheetView.swift in Sources */,
